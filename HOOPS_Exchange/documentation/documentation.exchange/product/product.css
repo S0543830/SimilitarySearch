@@ -1,0 +1,387 @@
+.indent
+{
+	margin-left: 30px;
+}
+		
+.search 
+{
+	float: right; 
+	padding-right: 50px;
+	margin-top: 25px;
+	width: 200px;
+}
+
+#navrow1
+{
+	display: none;
+}
+
+#navrow2
+{
+	display: none;
+}
+
+#navrow3
+{
+	display: none;
+}
+
+#nav-path
+{
+	display: none;
+}
+
+.summary
+{
+	display: none;
+}
+
+.memItemRight
+{
+	background-color: rgb(250, 250, 250);
+	border: 1px solid rgb(204, 204, 204);
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.memItemLeft
+{
+	background-color: rgb(250, 250, 250);
+	border: 1px solid rgb(204, 204, 204);
+}
+
+.memname
+{
+        width: 100%;
+}
+
+.ah
+{
+	font-weight: bold;
+	font-size: 200%;
+	margin-top: 24px;
+	margin-bottom: 4px;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 2px;
+	padding-right: 200px;
+	width: 100%;
+}
+
+div.qindex
+{
+	margin-top: 16px;
+	text-align: center;
+}
+
+/* styling for code snippet tab boxes */
+pre.fragment {
+	font-family: courier;
+	border: 0px solid #CCCCCC;
+	background-color: #f5f5f5;
+	padding: 4px 6px;
+	margin: 4px 8px 4px 2px;
+	overflow: auto;
+	line-height: 125%;
+	font-size: 10pt;
+}
+
+.fragment {
+	font-family: courier;
+	border: 0px solid #CCCCCC;
+	background-color: #f5f5f5;
+	padding: 4px 6px;
+	margin: 4px 8px 4px 2px;
+	overflow: auto;
+	line-height: 125%;
+	font-size: 10pt;
+}
+
+.codeSample pre.fragment 
+{
+	font-family: courier;
+	border: 0px;
+	background-color: #f5f5f5;
+	padding: 10px;
+	margin: 0px;
+	overflow: auto;
+	word-wrap: break-word;
+	line-height: 125%;
+	font-size: 10pt;
+}
+
+.codeTabGroup 
+{
+	border-bottom: 1px solid #888888;
+	height: 37px;
+	margin-right: 10px;
+}
+
+.codeTabGroup .currentTab 
+{
+	background-color: #f5f5f5;
+	border-bottom: 1px solid #f5f5f5;
+}
+
+.currentContent 
+{
+	padding: 20px;
+	border-bottom: 1px solid #888888;
+	border-left: 1px solid #888888;
+	border-right: 10px solid #888888;
+
+}
+
+.currentTab 
+{
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	color: #153788;
+}
+
+.currentTab a
+{
+	color: #153788;
+}
+
+.hide 
+{
+	display: none;
+}
+
+.leftTab 
+{
+
+}
+
+.rightTab 
+{
+	border-right: 1px solid #888888;
+}
+
+.snippetTab 
+{
+	float:right;
+	text-align: left;
+	height: 12px;
+	padding-top: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	margin-top: 19px;
+	font-size: 9px;
+	font-weight: normal;
+	color: #000000;
+	background-color: #FFFFFF;
+	border-left: 1px solid #888888;
+	border-top: 1px solid #888888;
+	border-bottom: 1px solid #888888;
+	border-right: 10px solid #888888;
+}
+
+.tabContent 
+{
+	padding: 10px;
+	background-color: #f5f5f5;
+	border-bottom: 1px solid #888888;
+	border-left: 1px solid #888888;
+	border-right: 10px solid #888888;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+.tabElement {
+	float:left;
+	text-align: left;
+	height: 26px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #777777;
+	background-color: #FFFFFF;
+	border-left: 1px solid #888888;
+	border-top: 1px solid #888888;
+	border-bottom: 1px solid #888888;
+}
+
+.tabElement a
+{
+	font-weight: bold;
+	color: #777777;
+	text-decoration: none;
+}
+
+.tabElement a:hover
+{
+	text-decoration: none;
+	font-weight: bold;
+	color: #C10000;
+}
+
+#tabGroup {
+	border-bottom: 1px solid #888888;
+	height: 37px;
+}
+/* end styling for code snippet tab boxes */
+
+div.caption
+{
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.title
+{
+	margin-top: 16px;
+	margin-bottom: 10px;
+}
+
+body, li, ol, p {
+	font-family: "Trebuchet MS", "Helvetica Neue", Helvetica, Arial, sans-serif;	
+}
+
+#titlearea 
+{
+	display: none;
+}
+
+.title
+{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+#navrow1
+{
+	display: none;
+}
+
+#navrow2
+{
+	display: none;
+}
+
+#nav-path
+{
+	display: none;
+}
+
+.summary
+{
+	display: none;
+}
+
+div.headertitle
+{
+	background-color: white;
+}
+
+.table_style1 {
+	border: 1px solid #ddd;
+}
+
+.table_style1 tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+.table_style1 td {
+    border-top: 1px solid #DDD;
+    padding: 6px 10px 6px 10px;
+	font-size: 90%;
+}
+
+.table_style1 th 
+{
+	color: #666;
+	font-size: 11px;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	line-height: 2.6em;
+	text-transform: uppercase;
+	border-collapse: separate;
+    border-spacing: 0px;
+}
+
+.filename
+{
+	font-style: italic;
+}
+
+table td.supported {
+	background-image: url('../common/images/green_circle.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+table td.unsupported {
+	background-image: url("../common/images/red_circle.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+table td.as-is {
+	background-image: url("../common/images/grey_circle.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.code
+{
+	font-family: courier;
+	font-size: 100%;
+}
+
+.center
+{
+	text-align: center;
+}
+
+.line
+{
+	white-space: pre;
+	font-family: courier;
+	
+}
+
+hr {
+	border: none; 
+	border-top: 1px solid #ddd;
+}
+
+/* styling for code */
+
+SPAN.keyword       { color: #008000 }
+SPAN.keywordtype   { color: #604020 }
+SPAN.keywordflow   { color: #e08000 }
+SPAN.comment       { color: #800000 }
+SPAN.preprocessor  { color: #806020 }
+SPAN.stringliteral { color: #002080 }
+SPAN.charliteral   { color: #008080 }
+SPAN.vhdldigit     { color: #ff00ff }
+SPAN.vhdlchar      { color: #000000 }
+SPAN.vhdlkeyword   { color: #700070 }
+SPAN.vhdllogic     { color: #ff0000 }
+
+/* end styling for code */
+
+.exchange {
+	display: inline;
+}
+
+.parasolid {
+	display: inline;
+}
+
+.searchbox {
+	display: inline;
+}

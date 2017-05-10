@@ -1,0 +1,8 @@
+C:\Users\el-ba\Desktop\indexing\SimilaritySearch\PDF3dReaderTests\bin\Debug\Pdf3DReaderTests.dll
+C:\Users\el-ba\Desktop\indexing\SimilaritySearch\PDF3dReaderTests\bin\Debug\Pdf3DReaderTests.pdb
+C:\Users\el-ba\Desktop\indexing\SimilaritySearch\PDF3dReaderTests\bin\Debug\nunit.framework.dll
+C:\Users\el-ba\Desktop\indexing\SimilaritySearch\PDF3dReaderTests\bin\Debug\Pdf3DReader.dll
+C:\Users\el-ba\Desktop\indexing\SimilaritySearch\PDF3dReaderTests\bin\Debug\nunit.framework.xml
+C:\Users\el-ba\Desktop\indexing\SimilaritySearch\PDF3dReaderTests\bin\Debug\Pdf3DReader.pdb
+C:\Users\el-ba\Desktop\indexing\SimilaritySearch\PDF3dReaderTests\obj\Debug\Pdf3DReaderTests.dll
+C:\Users\el-ba\Desktop\indexing\SimilaritySearch\PDF3dReaderTests\obj\Debug\Pdf3DReaderTests.pdb

@@ -1,0 +1,11 @@
+﻿  stdafx.cpp
+  AssemblyInfo.cpp
+  Datenbank.cpp
+  StartLFD.cpp
+  Code wird generiert...
+  .NETFramework,Version=v4.6.1.AssemblyAttributes.cpp
+  AssemblyInfo.obj : /DEBUG:FASTLINK wird nicht unterstützt, wenn verwalteter Code vorhanden ist; Link wird mit /DEBUG:FULL neu gestartet
+  StartLFD.vcxproj -> C:\Users\el-ba\Desktop\indexing\SimilaritySearch\StartLFD\bin\Debug\StartLFD.exe
+  StartLFD.vcxproj -> bin\Debug\StartLFD.pdb (Partial PDB)
+  ..\3DAlignment\bin\Debug\3DAlignment.dll
+  1 Datei(en) kopiert

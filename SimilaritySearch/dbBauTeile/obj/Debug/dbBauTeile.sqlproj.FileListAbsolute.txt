@@ -1,0 +1,9 @@
+C:\Users\el-ba\Desktop\indexing\SimilaritySearch\dbBauTeile\bin\Debug\dbBauTeile.dacpac
+C:\Users\el-ba\Desktop\indexing\SimilaritySearch\dbBauTeile\bin\Debug\dbBauTeile.dll
+C:\Users\el-ba\Desktop\indexing\SimilaritySearch\dbBauTeile\bin\Debug\dbBauTeile.pdb
+C:\Users\el-ba\Desktop\indexing\SimilaritySearch\dbBauTeile\obj\Debug\dbBauTeile.dll
+C:\Users\el-ba\Desktop\indexing\SimilaritySearch\dbBauTeile\obj\Debug\dbBauTeile.pdb
+C:\Users\el-ba\Desktop\indexing\SimilaritySearch\dbBauTeile\obj\Debug\Model.xml
+C:\Users\el-ba\Desktop\indexing\SimilaritySearch\dbBauTeile\obj\Debug\refactor.xml
+C:\Users\el-ba\Desktop\indexing\SimilaritySearch\dbBauTeile\obj\Debug\postdeploy.sql
+C:\Users\el-ba\Desktop\indexing\SimilaritySearch\dbBauTeile\obj\Debug\predeploy.sql

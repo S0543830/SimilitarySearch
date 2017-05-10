@@ -1,0 +1,955 @@
+/***********************************************************************************************************************
+*
+* Copyright (c) 2016 by Tech Soft 3D, LLC.
+* The information contained herein is confidential and proprietary to Tech Soft 3D, LLC., and considered a trade secret
+* as defined under civil and criminal statutes. Tech Soft 3D shall pursue its civil and criminal remedies in the event
+* of unauthorized use or misappropriation of its trade secrets. Use of this information by anyone other than authorized 
+* employees of Tech Soft 3D, LLC. is granted only under a written non-disclosure agreement, expressly prescribing the 
+* scope and manner of such use.
+*
+***********************************************************************************************************************/
+
+/*!
+\file
+\brief      Header file for initializing data
+\author     Tech Soft 3D
+\version    9.1
+\date       March 2016
+\par		Copyright (c) 2016 by Tech Soft 3D, LLC. All rights reserved.
+*/
+// File Version: 13.05.0
+
+
+#ifndef _A3DSDKINITIALIZEMACRO_H_
+#define _A3DSDKINITIALIZEMACRO_H_
+
+/*!
+Before invoking any function, you must initialize the structure that the data
+will be stored in by using this macro.
+\attention Use of memset: malloc must be included before this file.
+*/
+#define A3D_INITIALIZE_DATA( MAC_TYPE, MAC_VALUE) \
+	A3D_INITIALIZE_##MAC_TYPE( MAC_VALUE )
+
+/*!
+To initialize a array of data
+*/
+#define A3D_INITIALIZE_ARRAY_DATA( MAC_TYPE, MAC_PT_VALUE, MAC_SIZE) \
+{	\
+	for( A3DUns32 uiInitMacCnt=0; uiInitMacCnt<MAC_SIZE; uiInitMacCnt++) \
+	{ A3D_INITIALIZE_##MAC_TYPE( MAC_PT_VALUE[uiInitMacCnt] ) }\
+}
+
+#define A3D_INITIALIZE_DATA_VAR( s) \
+	{ memset(&(s), 0, sizeof(s)); (s).m_usStructSize = sizeof(s);} 
+
+
+/*
+Do not use the next macro.
+Use only A3D_INITIALIZE_DATA or A3D_INITIALIZE_ARRAY_DATA
+*/
+
+#define A3D_INITIALIZE_A3DParseDrawingCallbackData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector2dData( (MAC_VALUE.m_sSize)) \
+
+#define A3D_INITIALIZE_A3DDrawingVerticesData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DDrawingPictureData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector2dData( (MAC_VALUE.m_sPosition)) \
+	A3D_INITIALIZE_A3DVector2dData( (MAC_VALUE.m_sSize))
+
+#define A3D_INITIALIZE_A3DDrawingFilledAreaData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DDrawingCurveData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DIntervalData( (MAC_VALUE.m_sTrimInterval))
+
+#define A3D_INITIALIZE_A3DDrawingBlockOperatorData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DDrawingBlockBasicData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DDrawingViewData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector2dData( (MAC_VALUE.m_sOriginOnSheet)) \
+	A3D_INITIALIZE_A3DVector2dData( (MAC_VALUE.m_sOffsetLocation))
+
+#define A3D_INITIALIZE_A3DDrawingClipFrameData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DDomainData( (MAC_VALUE.m_sRectangularBox))
+
+#define A3D_INITIALIZE_A3DDrawingSheetData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector2dData( (MAC_VALUE.m_sSize)) \
+	A3D_INITIALIZE_A3DVector2dData( (MAC_VALUE.m_sRefPoint))
+
+#define A3D_INITIALIZE_A3DDrawingSheetFormatData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector2dData( (MAC_VALUE.m_sSize))
+
+#define A3D_INITIALIZE_A3DDrawingModelData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMarkupLineWeldingData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMarkupSpotWeldingData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sApproachVector)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sClampingVector)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sNormalVector))
+
+#define A3D_INITIALIZE_A3DMarkupGDTData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDFeatureControlFrameData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDFCValueData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDFCTolerancePerUnitData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDFCProjectedZoneData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMDFCValueData( MAC_VALUE.m_sLength )
+
+#define A3D_INITIALIZE_A3DMDFCFToleranceValueData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMDFCValueData( MAC_VALUE.m_sValue )
+
+#define A3D_INITIALIZE_A3DMDFCFDrawingRowData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDFCFRowDatumData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDFCFDraftingRowData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMarkupDatumData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMarkupDimensionData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sOffSet))
+
+#define A3D_INITIALIZE_A3DMDDimensionExtentionLineData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMDDimensionExtremityData( (MAC_VALUE.m_sExtremity1)) \
+	A3D_INITIALIZE_A3DMDDimensionExtremityData( (MAC_VALUE.m_sExtremity2))
+
+#define A3D_INITIALIZE_A3DMDDimensionExtremityData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDDimensionFunnelData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDDimensionLineData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDDimensionLineSymbolData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDDimensionForeshortenedData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDDimensionSecondPartData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDDimensionValueData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDDimensionCombinedToleranceFormatData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDDimensionSimpleToleranceFormatData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDDimensionValueFormatData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMarkupMeasurementPointData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sLocation)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sMeasurementVector)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sCoordinationVector)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sNormalVector))
+
+#define A3D_INITIALIZE_A3DMarkupLocatorData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sHotSpot)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sPunchDirection)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sPinDirection)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sNormalDirection))
+
+#define A3D_INITIALIZE_A3DMarkupFastenerData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sAxisVector)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sIndexVector)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sOptionalVector))
+
+#define A3D_INITIALIZE_A3DMarkupBalloonData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMarkupRoughnessData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMarkupRichTextData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMarkupCoordinateData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMarkupTextData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDTextPositionData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sPosition)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sBaseVector)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sUpVector))
+
+#define A3D_INITIALIZE_A3DMarkupDefinitionData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDTextPropertiesData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDLeaderDefinitionData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDMarkupLeaderStubData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDLeaderSymbolData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMDPositionReferenceData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector2dData( (MAC_VALUE.m_sOffsetToReference))
+
+#define A3D_INITIALIZE_A3DMDPosition2DData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector2dData( (MAC_VALUE.m_sPosition))
+
+#define A3D_INITIALIZE_A3DMDPosition3DData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sPosition))
+
+#define A3D_INITIALIZE_A3DProjectedPointCloudData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sPt)) \
+	A3D_INITIALIZE_A3DVector2dData( (MAC_VALUE.m_sUV))
+
+#define A3D_INITIALIZE_A3DMathFct3DNonLinearData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMathFct3DLinearData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMathFct1DCombinationData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMathFct1DArctanCosData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMathFct1DFractionData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMathFct1DTrigonometricData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMathFct1DPolynomData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DDrawCallbacksData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DCopyAndAdaptBrepModelData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DGraphTextureApplicationData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DGraphTextureDefinitionData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DGraphTextureTransformationData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DGlobalData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DFontData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DFontKeyData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMkpMarkupData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMiscMarkupLinkedItemData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMkpViewData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMkpAnnotationReferenceData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMkpAnnotationSetData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMkpAnnotationItemData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMkpLeaderData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRiPolyWireData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRiPolyBrepModelData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRiBrepModelData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRiPlaneData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRiCurveData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRiCoordinateSystemData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRiDirectionData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sOrigin)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sDirection))
+
+#define A3D_INITIALIZE_A3DRiPointSetData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRiSetData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRiRepresentationItemData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsExportAcisData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsExportJTData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	(MAC_VALUE).m_eWriteGeomTessMode = kA3DWriteGeomAndTess; \
+	(MAC_VALUE).m_bWriteHiddenObjects = false; \
+	(MAC_VALUE).m_bWritePMI = true;
+
+#define A3D_INITIALIZE_A3DRWParamsExportXMLData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	(MAC_VALUE).m_bExportMetadata = true; \
+	(MAC_VALUE).m_bExportTransformations = true; \
+	(MAC_VALUE).m_bExportColorMaterial = true; \
+	(MAC_VALUE).m_bExportProductInformationByFormat = false;
+
+#define A3D_INITIALIZE_A3DRWParamsExportPdfData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsExportU3DData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsExportStlData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsExportParasolidData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsTranslateToPkPartsData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	(MAC_VALUE).m_eHealing = kA3DE_HEALING_ONLY_IF_NOT_PARASOLID; \
+	(MAC_VALUE).m_eComputeAccurateEdges = kA3DE_ACCURATE_ONLY_IF_NOT_PARASOLID;
+
+#define A3D_INITIALIZE_A3DRWParamsExportIgesData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsExportStepData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsExportPrcData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsExportPdfData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DStream3DPDFData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsLoadData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DRWParamsGeneralData( (MAC_VALUE.m_sGeneral)) \
+	A3D_INITIALIZE_A3DRWParamsPmiData( (MAC_VALUE.m_sPmi)) \
+	A3D_INITIALIZE_A3DRWParamsTessellationData( (MAC_VALUE.m_sTessellation)) \
+	A3D_INITIALIZE_A3DRWParamsAssemblyData( (MAC_VALUE.m_sAssembly)) \
+	A3D_INITIALIZE_A3DRWParamsMultiEntriesData( (MAC_VALUE.m_sMultiEntries)) \
+	A3D_INITIALIZE_A3DRWParamsSpecificLoadData( (MAC_VALUE.m_sSpecifics)) \
+	A3D_INITIALIZE_A3DRWParamsIncrementalLoadData( (MAC_VALUE.m_sIncremental))
+
+#define A3D_INITIALIZE_A3DRWParamsIncrementalLoadData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DAsmProductOccurencesToReadParameters( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) 
+
+#define A3D_INITIALIZE_A3DRWParamsSpecificLoadData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DRWParamsCatiaV4Data( (MAC_VALUE.m_sCatiaV4)) \
+	A3D_INITIALIZE_A3DRWParamsCatiaV5Data( (MAC_VALUE.m_sCatiaV5)) \
+	A3D_INITIALIZE_A3DRWParamsUnigraphicsData( (MAC_VALUE.m_sUnigraphics)) \
+	A3D_INITIALIZE_A3DRWParamsProEData( (MAC_VALUE.m_sProE)) \
+	A3D_INITIALIZE_A3DRWParamsStepData( (MAC_VALUE.m_sStep)) \
+	A3D_INITIALIZE_A3DRWParamsIGESData( (MAC_VALUE.m_sIGES)) \
+	A3D_INITIALIZE_A3DRWParamsIFCData( (MAC_VALUE.m_sIFC)) \
+	A3D_INITIALIZE_A3DRWParamsJTData( (MAC_VALUE.m_sJT)) \
+	A3D_INITIALIZE_A3DRWParamsParasolidData( (MAC_VALUE.m_sParasolid)) \
+	A3D_INITIALIZE_A3DRWParamsSolidworksData( (MAC_VALUE.m_sSolidworks)) \
+	A3D_INITIALIZE_A3DRWParamsInventorData((MAC_VALUE.m_sInventor))
+
+#define A3D_INITIALIZE_A3DRWParamsSolidworksData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	(MAC_VALUE).m_bLoadAllConfigsData = false;
+
+#define A3D_INITIALIZE_A3DRWParamsInventorData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	(MAC_VALUE).m_bUseTessForFile = true;
+
+#define A3D_INITIALIZE_A3DRWParamsParasolidData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsJTData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	(MAC_VALUE).m_eReadTessellationLevelOfDetail = JTTessLODHigh;
+
+#define A3D_INITIALIZE_A3DRWParamsIGESData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsIFCData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	(MAC_VALUE).m_bFACETED_BREPAsOneFace = true;
+
+#define A3D_INITIALIZE_A3DRWParamsStepData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	(MAC_VALUE).m_eNameFromNAUO=kA3DStepNameFromNAUO_DESCRIPTION; \
+	(MAC_VALUE).m_bSplitSHELL_BASED_SURFACE_MODEL=true; \
+	(MAC_VALUE).m_bHealOrientations = false;
+
+#define A3D_INITIALIZE_A3DRWParamsProEData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	(MAC_VALUE).m_eFamilyTables = A3DProEFamTabOrUseTessellation;\
+	(MAC_VALUE).m_bBoolOpUseGenericIfNoTess = false;\
+	(MAC_VALUE).m_bFlexCompUseGenericIfNoTess = false;\
+	(MAC_VALUE).m_bHideSkeletons = false;
+
+#define A3D_INITIALIZE_A3DRWParamsUnigraphicsData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsCatiaV5Data( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsCatiaV4Data( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsMultiEntriesData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsAssemblyData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsSearchDirData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsTessellationData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsPmiData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRWParamsGeneralData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DAsmFilterData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DAsmLayerFilterItemData( (MAC_VALUE.m_sLayerFilterItem)) \
+	A3D_INITIALIZE_A3DAsmEntityFilterItemData( (MAC_VALUE.m_sEntityFilterItem))
+
+#define A3D_INITIALIZE_A3DAsmEntityFilterItemData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DAsmLayerFilterItemData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DAsmPartDefinitionData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DBoundingBoxData( (MAC_VALUE.m_sBoundingBox))
+
+#define A3D_INITIALIZE_A3DAsmProductOccurrenceData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DAsmProductOccurrenceDataSLW( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DAsmProductOccurrenceDataCat( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DAsmProductOccurrenceDataCV5( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DAsmProductOccurrenceDataUg( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DAsmProductOccurrenceDataProe( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DAsmProductOccurrenceDataInv( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DAsmProductOccurrenceDataJT( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DAsmModelFileData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMiscCascadedAttributesData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DGraphStyleData( (MAC_VALUE.m_sStyle))
+
+#define A3D_INITIALIZE_A3DGraphSceneDisplayParametersData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sRotationCenter))
+
+#define A3D_INITIALIZE_A3DGraphDirectionalLightData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sDirection))
+
+#define A3D_INITIALIZE_A3DGraphSpotLightData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sDirection)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sLocation))
+
+#define A3D_INITIALIZE_A3DGraphPointLightData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sLocation))
+
+#define A3D_INITIALIZE_A3DGraphAmbientLightData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DGraphCameraData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sLocation)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sLookAt)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sUp))
+
+#define A3D_INITIALIZE_A3DGraphVPicturePatternData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DGraphSolidPatternData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DGraphHatchingPatternData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DGraphHatchingPatternLineData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector2dData( (MAC_VALUE.m_sStart)) \
+	A3D_INITIALIZE_A3DVector2dData( (MAC_VALUE.m_sOffset))
+
+#define A3D_INITIALIZE_A3DGraphDottingPatternData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DGraphPictureData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DGraphMaterialData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DGraphLinePatternData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DGraphRgbColorData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DGraphStyleData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DGraphicsData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DTessMarkupData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DTess3DWireData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DTess3DData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DTessFaceData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DTessBaseData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DTopoMultipleVertexData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DTopoUniqueVertexData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sPoint))
+
+#define A3D_INITIALIZE_A3DTopoWireEdgeData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DIntervalData( (MAC_VALUE.m_sInterval))
+
+#define A3D_INITIALIZE_A3DTopoEdgeData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DIntervalData( (MAC_VALUE.m_sInterval))
+
+#define A3D_INITIALIZE_A3DTopoCoEdgeData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DTopoLoopData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DTopoFaceData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DDomainData( (MAC_VALUE.m_sSurfaceDomain))
+
+#define A3D_INITIALIZE_A3DTopoShellData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DTopoConnexData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DTopoBrepDataData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DBoundingBoxData( (MAC_VALUE.m_sBoundingBox))
+
+#define A3D_INITIALIZE_A3DTopoSingleWireBodyData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DTopoContextData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DTopoBodyData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DSurfFromCurvesData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DUVParameterizationData( (MAC_VALUE.m_sParam)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sOrigin))
+
+#define A3D_INITIALIZE_A3DSurfTransformData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DUVParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DSurfPipeData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DUVParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DSurfRuledData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DUVParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DSurfCylindricalData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DUVParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DSurfConeData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DUVParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DSurfBlend03Data( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DUVParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DSurfBlend02Data( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DUVParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DSurfBlend01Data( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DUVParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DSurfPlaneData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DUVParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DSurfOffsetData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DUVParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DSurfExtrusionData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DUVParameterizationData( (MAC_VALUE.m_sParam)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sDirection))
+
+#define A3D_INITIALIZE_A3DSurfRevolutionData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DUVParameterizationData( (MAC_VALUE.m_sParam)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sOrigin)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sDirection))
+
+#define A3D_INITIALIZE_A3DSurfTorusData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DUVParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DSurfCylinderData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DUVParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DSurfSphereData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DUVParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DSurfNurbsData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DCrvBlend02BoundaryData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DParameterizationData( (MAC_VALUE.m_sParam)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sStartLimitPoint)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sEndLimitPoint))
+
+#define A3D_INITIALIZE_A3DCrvIntersectionData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DParameterizationData( (MAC_VALUE.m_sParam)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sStartLimitPoint)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sEndLimitPoint))
+
+#define A3D_INITIALIZE_A3DCrossingPointsCrvIntersectionData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sPosition)) \
+	A3D_INITIALIZE_A3DVector2dData( (MAC_VALUE.m_sUVPosition1)) \
+	A3D_INITIALIZE_A3DVector2dData( (MAC_VALUE.m_sUVPosition2)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sTangent))
+
+#define A3D_INITIALIZE_A3DCrvHelixData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DParameterizationData( (MAC_VALUE.m_sParam)) \
+	A3D_INITIALIZE_A3DCrvHelixPitchCstData( (MAC_VALUE.m_sCstHelixData)) \
+	A3D_INITIALIZE_A3DCrvHelixPitchVarData( (MAC_VALUE.m_sVarHelixData))
+
+#define A3D_INITIALIZE_A3DCrvHelixPitchVarData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sStartPoint)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sUnitZ)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sUnitU))
+
+#define A3D_INITIALIZE_A3DCrvHelixPitchCstData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sStartPoint)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sOrigin)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sDirection))
+
+#define A3D_INITIALIZE_A3DCrvOffsetData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DParameterizationData( (MAC_VALUE.m_sParam)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sVector))
+
+#define A3D_INITIALIZE_A3DCrvOnSurfData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DCrvTransformData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DCrvEquationData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DParameterizationData( (MAC_VALUE.m_sParam)) \
+	A3D_INITIALIZE_A3DIntervalData( (MAC_VALUE.m_sMaxInterval))
+
+#define A3D_INITIALIZE_A3DCrvCompositeData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DCrvPolyLineData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DCrvHyperbolaData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DCrvParabolaData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DCrvEllipseData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DCrvCircleData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DCrvLineData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscCartesianTransformationData( (MAC_VALUE.m_sTrsf)) \
+	A3D_INITIALIZE_A3DParameterizationData( (MAC_VALUE.m_sParam))
+
+#define A3D_INITIALIZE_A3DCrvNurbsData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMiscReferenceOnTopologyData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMiscReferenceOnCsysItemData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMiscEntityReferenceData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMiscCartesianTransformationData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sOrigin)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sXVector)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sYVector)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sScale))
+
+#define A3D_INITIALIZE_A3DMiscGeneralTransformationData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DUVParameterizationData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DDomainData( (MAC_VALUE.m_sUVDomain))
+
+#define A3D_INITIALIZE_A3DParameterizationData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DIntervalData( (MAC_VALUE.m_sInterval))
+
+#define A3D_INITIALIZE_A3DBoundingBoxData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sMin)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sMax))
+
+#define A3D_INITIALIZE_A3DDomainData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector2dData( (MAC_VALUE.m_sMin)) \
+	A3D_INITIALIZE_A3DVector2dData( (MAC_VALUE.m_sMax))
+
+#define A3D_INITIALIZE_A3DIntervalData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DVector3dData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DVector2dData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMiscAttributeData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMiscSingleAttributeData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRootBaseWithGraphicsData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRootBaseData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DRTFFieldData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DPhysicalPropertiesData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sGravityCenter))
+
+#define A3D_INITIALIZE_A3DFaceUVPointInsideManagerData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DPlanarSectionData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sOrigin)) \
+	A3D_INITIALIZE_A3DVector3dData( (MAC_VALUE.m_sDirection))
+
+#define A3D_INITIALIZE_A3DCompareInputData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) 
+
+#define A3D_INITIALIZE_A3DCompareOutputData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) 
+
+#define A3D_INITIALIZE_A3DProjectPointCloudManagerDataFromRI( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) 
+
+#define A3D_INITIALIZE_A3DHLRRepresentationItemData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DHLRCurveData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DHLRViewData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMiscMaterialOrthotropic3DData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMiscMaterialPropertiesData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DMiscMaterialOrthotropic3DData((MAC_VALUE).m_sOrthotropic3D)
+
+#define A3D_INITIALIZE_A3DHLRViewPlaneData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+
+#define A3D_INITIALIZE_A3DThumbnailData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DFileInformationData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE )
+
+#define A3D_INITIALIZE_A3DMultiPlanarSectionData( MAC_VALUE ) \
+	A3D_INITIALIZE_DATA_VAR( MAC_VALUE ) \
+	A3D_INITIALIZE_A3DVector3dData((MAC_VALUE).m_sExtrudeDirection) \
+	A3D_INITIALIZE_A3DVector3dData((MAC_VALUE).m_sProfileNormal)
+
+#endif // _A3DSDKINITIALIZEMACRO_H_

@@ -1,0 +1,11 @@
+﻿  Stdafx.cpp
+  AssemblyInfo.cpp
+  Face.cpp
+  PDF3dReaderService.cpp
+  --------------------- THIS IS AN EVALUATION LICENSE -----------------------
+  ---------------------   IT WILL EXPIRE 31/12/2017 -----------------------
+  Code wird generiert...
+  .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
+  AssemblyInfo.obj : /DEBUG:FASTLINK wird nicht unterstützt, wenn verwalteter Code vorhanden ist; Link wird mit /DEBUG:FULL neu gestartet
+  PDF3dReader.vcxproj -> C:\Users\el-ba\Desktop\indexing\SimilaritySearch\PDF3dReader\bin\Debug\Pdf3DReader.dll
+  PDF3dReader.vcxproj -> bin\Debug\Pdf3DReader.pdb (Partial PDB)

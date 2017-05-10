@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{055DBC0F-9B6F-4A1F-B280-B648054B7F17}</ProjectGuid>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>bin\$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>bin\$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;LFD_EXPORTS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\3DAlignment.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <CallingConvention>Cdecl</CallingConvention>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\Release\3DAlignment.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0404</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\3DAlignment.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;LFD_EXPORTS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Debug\3DAlignment.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CallingConvention>Cdecl</CallingConvention>
+    </ClCompile>
+    <Midl>
+      <TypeLibraryName>.\Debug\3DAlignment.tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0404</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\3DAlignment.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;opengl32.lib;glut32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Bitmap.c" />
+    <ClCompile Include="Circularity.c" />
+    <ClCompile Include="ColorDescriptor.c" />
+    <ClCompile Include="Convert.c" />
+    <ClCompile Include="Eccentricity.c" />
+    <ClCompile Include="edge.c" />
+    <ClCompile Include="fftw\config.c" />
+    <ClCompile Include="fftw\executor.c" />
+    <ClCompile Include="fftw\fcr_1.c" />
+    <ClCompile Include="fftw\fcr_10.c" />
+    <ClCompile Include="fftw\fcr_11.c" />
+    <ClCompile Include="fftw\fcr_12.c" />
+    <ClCompile Include="fftw\fcr_128.c" />
+    <ClCompile Include="fftw\fcr_13.c" />
+    <ClCompile Include="fftw\fcr_14.c" />
+    <ClCompile Include="fftw\fcr_15.c" />
+    <ClCompile Include="fftw\fcr_16.c" />
+    <ClCompile Include="fftw\fcr_2.c" />
+    <ClCompile Include="fftw\fcr_3.c" />
+    <ClCompile Include="fftw\fcr_32.c" />
+    <ClCompile Include="fftw\fcr_4.c" />
+    <ClCompile Include="fftw\fcr_5.c" />
+    <ClCompile Include="fftw\fcr_6.c" />
+    <ClCompile Include="fftw\fcr_64.c" />
+    <ClCompile Include="fftw\fcr_7.c" />
+    <ClCompile Include="fftw\fcr_8.c" />
+    <ClCompile Include="fftw\fcr_9.c" />
+    <ClCompile Include="fftw\fftwf77.c" />
+    <ClCompile Include="fftw\fftwnd.c" />
+    <ClCompile Include="fftw\fhb_10.c" />
+    <ClCompile Include="fftw\fhb_16.c" />
+    <ClCompile Include="fftw\fhb_2.c" />
+    <ClCompile Include="fftw\fhb_3.c" />
+    <ClCompile Include="fftw\fhb_32.c" />
+    <ClCompile Include="fftw\fhb_4.c" />
+    <ClCompile Include="fftw\fhb_5.c" />
+    <ClCompile Include="fftw\fhb_6.c" />
+    <ClCompile Include="fftw\fhb_7.c" />
+    <ClCompile Include="fftw\fhb_8.c" />
+    <ClCompile Include="fftw\fhb_9.c" />
+    <ClCompile Include="fftw\fhf_10.c" />
+    <ClCompile Include="fftw\fhf_16.c" />
+    <ClCompile Include="fftw\fhf_2.c" />
+    <ClCompile Include="fftw\fhf_3.c" />
+    <ClCompile Include="fftw\fhf_32.c" />
+    <ClCompile Include="fftw\fhf_4.c" />
+    <ClCompile Include="fftw\fhf_5.c" />
+    <ClCompile Include="fftw\fhf_6.c" />
+    <ClCompile Include="fftw\fhf_7.c" />
+    <ClCompile Include="fftw\fhf_8.c" />
+    <ClCompile Include="fftw\fhf_9.c" />
+    <ClCompile Include="fftw\fni_1.c" />
+    <ClCompile Include="fftw\fni_10.c" />
+    <ClCompile Include="fftw\fni_11.c" />
+    <ClCompile Include="fftw\fni_12.c" />
+    <ClCompile Include="fftw\fni_13.c" />
+    <ClCompile Include="fftw\fni_14.c" />
+    <ClCompile Include="fftw\fni_15.c" />
+    <ClCompile Include="fftw\fni_16.c" />
+    <ClCompile Include="fftw\fni_2.c" />
+    <ClCompile Include="fftw\fni_3.c" />
+    <ClCompile Include="fftw\fni_32.c" />
+    <ClCompile Include="fftw\fni_4.c" />
+    <ClCompile Include="fftw\fni_5.c" />
+    <ClCompile Include="fftw\fni_6.c" />
+    <ClCompile Include="fftw\fni_64.c" />
+    <ClCompile Include="fftw\fni_7.c" />
+    <ClCompile Include="fftw\fni_8.c" />
+    <ClCompile Include="fftw\fni_9.c" />
+    <ClCompile Include="fftw\fn_1.c" />
+    <ClCompile Include="fftw\fn_10.c" />
+    <ClCompile Include="fftw\fn_11.c" />
+    <ClCompile Include="fftw\fn_12.c" />
+    <ClCompile Include="fftw\fn_13.c" />
+    <ClCompile Include="fftw\fn_14.c" />
+    <ClCompile Include="fftw\fn_15.c" />
+    <ClCompile Include="fftw\fn_16.c" />
+    <ClCompile Include="fftw\fn_2.c" />
+    <ClCompile Include="fftw\fn_3.c" />
+    <ClCompile Include="fftw\fn_32.c" />
+    <ClCompile Include="fftw\fn_4.c" />
+    <ClCompile Include="fftw\fn_5.c" />
+    <ClCompile Include="fftw\fn_6.c" />
+    <ClCompile Include="fftw\fn_64.c" />
+    <ClCompile Include="fftw\fn_7.c" />
+    <ClCompile Include="fftw\fn_8.c" />
+    <ClCompile Include="fftw\fn_9.c" />
+    <ClCompile Include="fftw\frc_1.c" />
+    <ClCompile Include="fftw\frc_10.c" />
+    <ClCompile Include="fftw\frc_11.c" />
+    <ClCompile Include="fftw\frc_12.c" />
+    <ClCompile Include="fftw\frc_128.c" />
+    <ClCompile Include="fftw\frc_13.c" />
+    <ClCompile Include="fftw\frc_14.c" />
+    <ClCompile Include="fftw\frc_15.c" />
+    <ClCompile Include="fftw\frc_16.c" />
+    <ClCompile Include="fftw\frc_2.c" />
+    <ClCompile Include="fftw\frc_3.c" />
+    <ClCompile Include="fftw\frc_32.c" />
+    <ClCompile Include="fftw\frc_4.c" />
+    <ClCompile Include="fftw\frc_5.c" />
+    <ClCompile Include="fftw\frc_6.c" />
+    <ClCompile Include="fftw\frc_64.c" />
+    <ClCompile Include="fftw\frc_7.c" />
+    <ClCompile Include="fftw\frc_8.c" />
+    <ClCompile Include="fftw\frc_9.c" />
+    <ClCompile Include="fftw\ftwi_10.c" />
+    <ClCompile Include="fftw\ftwi_16.c" />
+    <ClCompile Include="fftw\ftwi_2.c" />
+    <ClCompile Include="fftw\ftwi_3.c" />
+    <ClCompile Include="fftw\ftwi_32.c" />
+    <ClCompile Include="fftw\ftwi_4.c" />
+    <ClCompile Include="fftw\ftwi_5.c" />
+    <ClCompile Include="fftw\ftwi_6.c" />
+    <ClCompile Include="fftw\ftwi_64.c" />
+    <ClCompile Include="fftw\ftwi_7.c" />
+    <ClCompile Include="fftw\ftwi_8.c" />
+    <ClCompile Include="fftw\ftwi_9.c" />
+    <ClCompile Include="fftw\ftw_10.c" />
+    <ClCompile Include="fftw\ftw_16.c" />
+    <ClCompile Include="fftw\ftw_2.c" />
+    <ClCompile Include="fftw\ftw_3.c" />
+    <ClCompile Include="fftw\ftw_32.c" />
+    <ClCompile Include="fftw\ftw_4.c" />
+    <ClCompile Include="fftw\ftw_5.c" />
+    <ClCompile Include="fftw\ftw_6.c" />
+    <ClCompile Include="fftw\ftw_64.c" />
+    <ClCompile Include="fftw\ftw_7.c" />
+    <ClCompile Include="fftw\ftw_8.c" />
+    <ClCompile Include="fftw\ftw_9.c" />
+    <ClCompile Include="fftw\generic.c" />
+    <ClCompile Include="fftw\malloc.c" />
+    <ClCompile Include="fftw\planner.c" />
+    <ClCompile Include="fftw\putils.c" />
+    <ClCompile Include="fftw\rader.c" />
+    <ClCompile Include="fftw\rconfig.c" />
+    <ClCompile Include="fftw\rexec.c" />
+    <ClCompile Include="fftw\rexec2.c" />
+    <ClCompile Include="fftw\rfftwf77.c" />
+    <ClCompile Include="fftw\rfftwnd.c" />
+    <ClCompile Include="fftw\rgeneric.c" />
+    <ClCompile Include="fftw\rplanner.c" />
+    <ClCompile Include="fftw\timer.c" />
+    <ClCompile Include="fftw\twiddle.c" />
+    <ClCompile Include="fftw\wisdom.c" />
+    <ClCompile Include="fftw\wisdomio.c" />
+    <ClCompile Include="FourierDescriptor.c" />
+    <ClCompile Include="Main.c" />
+    <ClCompile Include="MORPHOLOGY.C" />
+    <ClCompile Include="RecovAffine.c" />
+    <ClCompile Include="Refine.c" />
+    <ClCompile Include="RegionShape.c" />
+    <ClCompile Include="Rotate.c" />
+    <ClCompile Include="RWObj.c" />
+    <ClCompile Include="thin.c" />
+    <ClCompile Include="TraceContour.c" />
+    <ClCompile Include="TranslateScale.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BITMAP.H" />
+    <ClInclude Include="Circularity.h" />
+    <ClInclude Include="ColorDescriptor.h" />
+    <ClInclude Include="convert.h" />
+    <ClInclude Include="ds.h" />
+    <ClInclude Include="Eccentricity.h" />
+    <ClInclude Include="Edge.h" />
+    <ClInclude Include="fftw\config.h" />
+    <ClInclude Include="fftw\f77_func.h" />
+    <ClInclude Include="fftw\fftw-int.h" />
+    <ClInclude Include="fftw\fftw.h" />
+    <ClInclude Include="fftw\rfftw.h" />
+    <ClInclude Include="FourierDescriptor.h" />
+    <ClInclude Include="glut.h" />
+    <ClInclude Include="MORPHOLOGY.H" />
+    <ClInclude Include="RecovAffine.h" />
+    <ClInclude Include="Refine.h" />
+    <ClInclude Include="RegionShape.h" />
+    <ClInclude Include="Rotate.h" />
+    <ClInclude Include="RWObj.h" />
+    <ClInclude Include="thin.h" />
+    <ClInclude Include="TraceContour.h" />
+    <ClInclude Include="TranslateScale.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="glut.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

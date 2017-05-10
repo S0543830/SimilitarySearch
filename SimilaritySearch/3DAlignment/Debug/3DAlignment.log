@@ -1,0 +1,396 @@
+﻿  TranslateScale.c
+  TraceContour.c
+  thin.c
+  RWObj.c
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\rwobj.c(21): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\rwobj.c(35): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(2254): note: Siehe Deklaration von "sscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\rwobj.c(41): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(2254): note: Siehe Deklaration von "sscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\rwobj.c(47): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(2254): note: Siehe Deklaration von "sscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\rwobj.c(75): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\rwobj.c(76): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\rwobj.c(95): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(2254): note: Siehe Deklaration von "sscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\rwobj.c(105): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(2254): note: Siehe Deklaration von "sscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\rwobj.c(137): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(2254): note: Siehe Deklaration von "sscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\rwobj.c(148): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(2254): note: Siehe Deklaration von "sscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\rwobj.c(176): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(2254): note: Siehe Deklaration von "sscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\rwobj.c(178): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(2254): note: Siehe Deklaration von "sscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\rwobj.c(200): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(2254): note: Siehe Deklaration von "sscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\rwobj.c(222): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\rwobj.c(246): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+  Rotate.c
+  RegionShape.c
+  Refine.c
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\refine.c(68): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\refine.c(73): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+  RecovAffine.c
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\recovaffine.c(23): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\recovaffine.c(26): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1193): note: Siehe Deklaration von "fscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\recovaffine.c(48): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\recovaffine.c(59): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\recovaffine.c(73): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+  MORPHOLOGY.C
+  Main.c
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(59): warning C4101: "MeanX": Unreferenzierte lokale Variable
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(59): warning C4101: "MeanY": Unreferenzierte lokale Variable
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(452): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(470): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(471): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(472): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(474): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(476): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(477): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(564): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(603): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(604): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(659): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(660): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(689): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(690): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(706): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(707): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(733): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(734): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(775): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(787): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(788): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(853): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(926): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(927): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1033): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1036): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1193): note: Siehe Deklaration von "fscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1040): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1041): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1193): note: Siehe Deklaration von "fscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1046): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1047): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1063): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1066): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1193): note: Siehe Deklaration von "fscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1069): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1070): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1109): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: Siehe Deklaration von "strcpy"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1122): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: Siehe Deklaration von "strcpy"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1131): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: Siehe Deklaration von "strcpy"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1134): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: Siehe Deklaration von "strcpy"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1159): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1162): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1193): note: Siehe Deklaration von "fscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1166): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1167): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1193): note: Siehe Deklaration von "fscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1172): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1173): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1183): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1186): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1193): note: Siehe Deklaration von "fscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1189): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1190): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1223): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: Siehe Deklaration von "strcpy"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1236): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: Siehe Deklaration von "strcpy"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1245): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: Siehe Deklaration von "strcpy"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1248): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: Siehe Deklaration von "strcpy"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1273): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1276): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1193): note: Siehe Deklaration von "fscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1280): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1281): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1193): note: Siehe Deklaration von "fscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1286): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1287): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1297): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1300): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1193): note: Siehe Deklaration von "fscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1303): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1304): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1337): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: Siehe Deklaration von "strcpy"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1350): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: Siehe Deklaration von "strcpy"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1359): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: Siehe Deklaration von "strcpy"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1362): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: Siehe Deklaration von "strcpy"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1386): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1389): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1193): note: Siehe Deklaration von "fscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1393): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1394): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1193): note: Siehe Deklaration von "fscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1399): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1400): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1406): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1409): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1193): note: Siehe Deklaration von "fscanf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1412): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1413): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1448): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: Siehe Deklaration von "strcpy"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1461): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: Siehe Deklaration von "strcpy"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1470): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: Siehe Deklaration von "strcpy"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(1473): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: Siehe Deklaration von "strcpy"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(216): warning C4101: "dest_eccCoeff": Unreferenzierte lokale Variable
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(192): warning C4101: "matrix": Unreferenzierte lokale Variable
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(184): warning C4101: "destBuff": Unreferenzierte lokale Variable
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(189): warning C4101: "fpt2": Unreferenzierte lokale Variable
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(189): warning C4101: "fpt3": Unreferenzierte lokale Variable
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(189): warning C4101: "fpt_fd": Unreferenzierte lokale Variable
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\main.c(195): warning C4101: "Err": Unreferenzierte lokale Variable
+  FourierDescriptor.c
+  wisdomio.c
+  wisdom.c
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\fftw\wisdom.c(153): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: Siehe Deklaration von "sprintf"
+  twiddle.c
+  timer.c
+  rplanner.c
+  rgeneric.c
+  rfftwnd.c
+  rfftwf77.c
+  rexec2.c
+  Code wird generiert...
+  Kompilieren...
+  rexec.c
+  rconfig.c
+  rader.c
+  putils.c
+  planner.c
+  malloc.c
+  generic.c
+  ftw_9.c
+  ftw_8.c
+  ftw_7.c
+  ftw_64.c
+  ftw_6.c
+  ftw_5.c
+  ftw_4.c
+  ftw_32.c
+  ftw_3.c
+  ftw_2.c
+  ftw_16.c
+  ftw_10.c
+  ftwi_9.c
+  Code wird generiert...
+  Kompilieren...
+  ftwi_8.c
+  ftwi_7.c
+  ftwi_64.c
+  ftwi_6.c
+  ftwi_5.c
+  ftwi_4.c
+  ftwi_32.c
+  ftwi_3.c
+  ftwi_2.c
+  ftwi_16.c
+  ftwi_10.c
+  frc_9.c
+  frc_8.c
+  frc_7.c
+  frc_64.c
+  frc_6.c
+  frc_5.c
+  frc_4.c
+  frc_32.c
+  frc_3.c
+  Code wird generiert...
+  Kompilieren...
+  frc_2.c
+  frc_16.c
+  frc_15.c
+  frc_14.c
+  frc_13.c
+  frc_128.c
+  frc_12.c
+  frc_11.c
+  frc_10.c
+  frc_1.c
+  fn_9.c
+  fn_8.c
+  fn_7.c
+  fn_64.c
+  fn_6.c
+  fn_5.c
+  fn_4.c
+  fn_32.c
+  fn_3.c
+  fn_2.c
+  Code wird generiert...
+  Kompilieren...
+  fn_16.c
+  fn_15.c
+  fn_14.c
+  fn_13.c
+  fn_12.c
+  fn_11.c
+  fn_10.c
+  fn_1.c
+  fni_9.c
+  fni_8.c
+  fni_7.c
+  fni_64.c
+  fni_6.c
+  fni_5.c
+  fni_4.c
+  fni_32.c
+  fni_3.c
+  fni_2.c
+  fni_16.c
+  fni_15.c
+  Code wird generiert...
+  Kompilieren...
+  fni_14.c
+  fni_13.c
+  fni_12.c
+  fni_11.c
+  fni_10.c
+  fni_1.c
+  fhf_9.c
+  fhf_8.c
+  fhf_7.c
+  fhf_6.c
+  fhf_5.c
+  fhf_4.c
+  fhf_32.c
+  fhf_3.c
+  fhf_2.c
+  fhf_16.c
+  fhf_10.c
+  fhb_9.c
+  fhb_8.c
+  fhb_7.c
+  Code wird generiert...
+  Kompilieren...
+  fhb_6.c
+  fhb_5.c
+  fhb_4.c
+  fhb_32.c
+  fhb_3.c
+  fhb_2.c
+  fhb_16.c
+  fhb_10.c
+  fftwnd.c
+  fftwf77.c
+  fcr_9.c
+  fcr_8.c
+  fcr_7.c
+  fcr_64.c
+  fcr_6.c
+  fcr_5.c
+  fcr_4.c
+  fcr_32.c
+  fcr_3.c
+  fcr_2.c
+  Code wird generiert...
+  Kompilieren...
+  fcr_16.c
+  fcr_15.c
+  fcr_14.c
+  fcr_13.c
+  fcr_128.c
+  fcr_12.c
+  fcr_11.c
+  fcr_10.c
+  fcr_1.c
+  executor.c
+  config.c
+  edge.c
+  Eccentricity.c
+  Convert.c
+  ColorDescriptor.c
+  Circularity.c
+  Bitmap.c
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\bitmap.c(25): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\bitmap.c(88): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+c:\users\el-ba\desktop\indexing\similaritysearch\3dalignment\bitmap.c(135): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(205): note: Siehe Deklaration von "fopen"
+  Code wird generiert...
+     Bibliothek "bin\Debug\3DAlignment.lib" und Objekt "bin\Debug\3DAlignment.exp" werden erstellt.
+  3DAlignment.vcxproj -> C:\Users\el-ba\Desktop\indexing\SimilaritySearch\3DAlignment\bin\Debug\3DAlignment.dll
+  3DAlignment.vcxproj -> bin\Debug\3DAlignment.pdb (Full PDB)
